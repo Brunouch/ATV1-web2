@@ -8,11 +8,11 @@
         if($fp) {
             while(!feof($fp)) {
 				$arr = array();
-                $id = fgets($fp);
+                $cpf = fgets($fp);
 				$dados = fgets($fp);
 				if(!empty($dados)) {
 					$arr = explode("#", $dados);
-					$cursos[$id] = $arr;
+					$pessoas[$cpf] = $arr;
 				}
 			}
 			fclose($fp);
@@ -85,7 +85,11 @@
 	}
 
 	function delete() {
+		$pessoas = select();
+
+		$fp = fopen('bkp.txt', 'a+');
 		
+
 	}
 
 ?>

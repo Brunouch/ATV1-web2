@@ -59,7 +59,7 @@
 		echo "<script> window.location='viewMain.php' </script>";
 	}
 
-	function loadCursos() {
+	function loadPessoas() {
 
 		$pessoas = select();
 

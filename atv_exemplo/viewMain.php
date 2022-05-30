@@ -46,7 +46,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <?php loadCursos(); ?>
+                            <?php loadPessoas(); ?>
                         </tbody>    
                     </table>
                 </div>
