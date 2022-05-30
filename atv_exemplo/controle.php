@@ -59,6 +59,8 @@
 		echo "<script> window.location='viewMain.php' </script>";
 	}
 
+	
+
 	function loadPessoas() {
 
 		$pessoas = select();

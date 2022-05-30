@@ -84,11 +84,22 @@
 		}
 	}
 
-	function delete() {
+	function delete($cpf) {
 		$pessoas = select();
 
 		$fp = fopen('bkp.txt', 'a+');
-		
+
+		if($fp){
+			foreach($pessoas as $chave => $dados){
+				if(!empty($dados)){
+					fputs($fp, $chave);
+					if($cpf != trim($chave))
+					unset($pessoas[$cpf]);
+				}
+			}
+		}
+		fclose($fp);
+		echo "<script> alert('[OK] Pessoa Excluida com Sucesso!') </script>";
 
 	}
 
