@@ -92,14 +92,20 @@
 		if($fp){
 			foreach($pessoas as $chave => $dados){
 				if(!empty($dados)){
-					fputs($fp, $chave);
-					if($cpf != trim($chave))
-					unset($pessoas[$cpf]);
+					if(trim($cpf) != trim($chave)){
+						fputs($fp, $chave);
+						$linha=$dados[0]."#".$dados[1]."#".$dados[2];
+						fputs($fp, $linha);
+					}
+					
 				}
 			}
 		}
 		fclose($fp);
 		echo "<script> alert('[OK] Pessoa Excluida com Sucesso!') </script>";
+
+		unlink("pessoas.txt");
+		rename("bkp.txt", "pessoas.txt");
 
 	}
 

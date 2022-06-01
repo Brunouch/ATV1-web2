@@ -25,7 +25,7 @@
 		}
 		// REMOVER
 		else if(strcmp($dados[0], "remover") == 0){
-			echo "<script> window.location='viewRemover.php?cpf=".$dados[1]."' </script>";
+			delete($dados[1]);
 		}
 	}
 
@@ -83,10 +83,12 @@
 
 					echo "<td>";
 						echo "<button type='submit' name='acao' value='alterar/".$cpf."' class='btn btn-success'>";
-							echo "<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='#FFF' class='bi bi-arrow-counterclockwise' viewBox='0 0 16 16'>";
-								echo "<path fill-rule='evenodd' d='M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z'/>";
-								echo "<path d='M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z'/>";
-							echo "</svg>";
+							echo "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>";
+							echo "<path d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z'/>"; 
+						echo "</svg>";
+								
+			
+							
 						echo "</button>";
 						echo "&nbsp";
 						echo "<button type='submit' name='acao' value='remover/".$cpf."' class='btn btn-danger'>";
