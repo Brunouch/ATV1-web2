@@ -39,7 +39,7 @@
 			);
 
 			Pessoa::create($data);
-			echo "<script>window.location='mainView.php'</script>";
+			echo "<script>window.location='viewMain.php'</script>";
 		}
 
 		public static function edit($cpf) {
@@ -77,7 +77,6 @@
 
 		public static function loadTable() {
 
-			// echo "<script>alert('CursoController::loadTable()')</script>";
 			$data = Pessoa::all("ORDER BY nome");
 
 			while($row = $data->fetchObject()) {

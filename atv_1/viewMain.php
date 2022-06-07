@@ -39,8 +39,8 @@
                         <caption>Tabela de <b>Pessoas</b></caption>
                         <thead>
                         <tr>
-                            <th scope="col" class="d-none d-md-table-cell">CPF</th>
                             <th scope="col">NOME</th>
+                            <th scope="col" class="d-none d-md-table-cell">CPF</th>
                             <th scope="col" class="d-none d-md-table-cell">ENDEREÇO</th>
                             <th scope="col" class="d-none d-md-table-cell">TELEFONE</th>
                             <th scope="col">AÇÕES</th>

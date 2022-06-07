@@ -25,12 +25,12 @@
                     <div class="col" >
                         <div class="form-floating mb-3">
                             <input 
-                                type="text" 
-                                class="form-control" 
-                                name="cpf" 
-                                placeholder="cpf"
+                            type="text" 
+                            class="form-control" 
+                            name="nome" 
+                            placeholder="Nome"
                             />
-                            <label for="cpf">Cpf</label>
+                            <label for="nome">Nome</label>
                         </div>
                     </div>
                 </div>
@@ -40,10 +40,10 @@
                             <input 
                                 type="text" 
                                 class="form-control" 
-                                name="nome" 
-                                placeholder="Nome"
+                                name="cpf" 
+                                placeholder="Cpf"
                             />
-                            <label for="nome">Nome</label>
+                            <label for="cpf">Cpf</label>
                         </div>
                     </div>
                 </div>
