@@ -1,9 +1,9 @@
 <?php
 
-    include_once ("controle.php");
+    include_once 'global.php';
 
     if( !empty($_POST['form_submit']) ) {
-        cadastrar();
+        PessoaController::store();
     }
 ?>
 

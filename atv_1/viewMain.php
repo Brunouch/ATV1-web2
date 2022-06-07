@@ -1,9 +1,10 @@
 <?php
 
-    include_once ("controle.php");
+    include_once 'global.php';
+    include_once 'PessoaController.php';   
 
     if( !empty($_POST['form_submit']) ) {
-        rotas($_POST["acao"]);
+        PessoaController::rotas();
     }
 ?>
 
@@ -46,7 +47,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <?php loadPessoas(); ?>
+                            <?php PessoaController::loadTable();  ?>
                         </tbody>    
                     </table>
                 </div>
