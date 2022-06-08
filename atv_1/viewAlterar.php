@@ -1,9 +1,10 @@
 <?php
 
     include_once 'global.php';
+    include_once 'PessoaController.php';
 
     if( !empty($_POST['form_submit']) ) {
-        PessoaController::store();
+        PessoaController::update();
     }
 ?>
 

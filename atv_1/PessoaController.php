@@ -48,7 +48,7 @@
 
 			if(!empty($pessoa)) {
 
-				$url = "cursoEdit.php?id=$pessoa->cpf";
+				$url = "viewAlterar.php?cpf=$pessoa->cpf";
                 $url .= "&nome=$pessoa->nome";
                 $url .= "&endereco=$pessoa->endereco";
                 $url .= "&telefone=$pessoa->telefone";
@@ -61,7 +61,6 @@
 			
 			$data = array(
 				"nome" => $_POST["nome"],
-                "cpf" => $_POST["cpf"],
 				"endereco" => $_POST["endereco"],
 				"telefone" => $_POST["telefone"]
 			);
@@ -70,8 +69,8 @@
 			echo "<script>window.location='viewMain.php'</script>";
 		}
 
-		public static function destroy() {
-
+		public static function destroy($cpf) {
+			Pessoa::destroy($cpf);
 			echo "<script>window.location='viewMain.php'</script>";
 		}
 
