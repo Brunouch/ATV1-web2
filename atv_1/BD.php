@@ -6,10 +6,10 @@
 
         public static function connection() {
 
-            $str_conn = "mysql:host=wagnerweinert.com.br;dbname=".config::DB_NOME;
+            $str_conn = "mysql:host=wagnerweinert.com.br;dbname=tads20_bruno";
 
-    		return new PDO($str_conn, config::DB_USUARIO, config::DB_SENHA,
-                array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES ".config::DB_CHARSET));
+    		return new PDO($str_conn, 'tads20_bruno', 'tads20_bruno',
+                array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
     	}
 
         public static function select($tabela, $orderby="") {
